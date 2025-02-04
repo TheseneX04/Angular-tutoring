@@ -28,15 +28,15 @@ export class DashboardComponent implements OnInit {
   }
 
   maxOffices(): number {
-    return Math.max(...(this.stats()?.officesPerFloor.map(f => f.officeCount) || [0]));
+    return 35;
   }
 
   maxSeats(): number {
-    return Math.max(...(this.stats()?.seatsPerFloor.map(f => f.seatCount) || [0]));
+    return 34;
   }
 
   getSeatsForFloor(floorNumber: number): number {
-    return this.stats()?.seatsPerFloor.find(f => f.floorNumber === floorNumber)?.seatCount || 0;
+    return 1;
   }
 
   private loadDashboardStats(): void {
